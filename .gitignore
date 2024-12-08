@@ -1,2 +1,3 @@
 standardised_datasets/**
 logs/**
+**/__pycache__/
