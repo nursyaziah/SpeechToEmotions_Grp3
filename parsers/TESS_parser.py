@@ -33,7 +33,7 @@ class tess_parser:
         gender = 'F'
         intensity = '01'
 
-        return f"{emotion_code}_{intensity}_{gender}_tess_{actor}_{word}"
+        return f"{emotion_code}_{intensity}_{gender}_tess_{actor}_{word}.wav"
     
     def process_files(self, input_path: str, output_path: str = './standardised_datasets/TESS') -> None:
         input_path = Path(input_path)
