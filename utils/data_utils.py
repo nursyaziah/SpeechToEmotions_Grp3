@@ -59,7 +59,7 @@ def create_audio_dataframe(standardised_dir):
            }
            
            data.append({
-               'path': str(file_path),
+               'path': './' + str(file_path),
                'emotion': emotion_map[emotion_code],
                'intensity': intensity_map[intensity_code],
                'gender': gender,
