@@ -2,6 +2,7 @@ from parsers.RAVDESS_parser import ravdess_parser
 from parsers.TESS_parser import tess_parser
 from parsers.CREMA_parser import crema_parser
 from parsers.SAVEE_parser import savee_parser
+from utils.data_utils import create_audio_dataframe
 
 def process_datasets():
     ravdess = ravdess_parser()
@@ -35,6 +36,8 @@ def process_datasets():
         print("Processing SAVEE dataset...")
         savee.process_files(savee_path)
         print("SAVEE processing complete")
+
+        df = create_audio_dataframe("./standardised_datasets")
         
     except Exception as e:
         print(f"Error during processing: {str(e)}")
